@@ -2,24 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/styles';
+import SettingsBrightnessIcon from '@material-ui/icons/SettingsBrightness';
 import {
   Card,
-  CardHeader,
   CardContent,
-  CardActions,
-  Grid,
-  Divider,
-  FormControlLabel,
-  Checkbox,
-  Typography,
-  Button
 } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
   root: {},
   item: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   }
 }));
 
@@ -32,112 +25,12 @@ const Notifications = props => {
     <Card
       {...rest}
       className={clsx(classes.root, className)}
+      style={{ height:140, boxShadow: '1px 1px 3px 3px lightgray', cursor:'pointer' }}
     >
-      <form>
-        <CardHeader
-          subheader="Manage the notifications"
-          title="Notifications"
-        />
-        <Divider />
-        <CardContent>
-          <Grid
-            container
-            spacing={6}
-            wrap="wrap"
-          >
-            <Grid
-              className={classes.item}
-              item
-              md={4}
-              sm={6}
-              xs={12}
-            >
-              <Typography
-                gutterBottom
-                variant="h6"
-              >
-                Notifications
-              </Typography>
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    color="primary"
-                    defaultChecked //
-                  />
-                }
-                label="Email"
-              />
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    color="primary"
-                    defaultChecked //
-                  />
-                }
-                label="Push Notifications"
-              />
-              <FormControlLabel
-                control={<Checkbox color="primary" />}
-                label="Text Messages"
-              />
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    color="primary"
-                    defaultChecked //
-                  />
-                }
-                label="Phone calls"
-              />
-            </Grid>
-            <Grid
-              className={classes.item}
-              item
-              md={4}
-              sm={6}
-              xs={12}
-            >
-              <Typography
-                gutterBottom
-                variant="h6"
-              >
-                Messages
-              </Typography>
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    color="primary"
-                    defaultChecked //
-                  />
-                }
-                label="Email"
-              />
-              <FormControlLabel
-                control={<Checkbox color="primary" />}
-                label="Push Notifications"
-              />
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    color="primary"
-                    defaultChecked //
-                  />
-                }
-                label="Phone calls"
-              />
-            </Grid>
-          </Grid>
+      <SettingsBrightnessIcon style={{ height:100, width:150, zIndex:333333, color:'lightgray',position:'relative',bottom:-13  }}/>
+        <CardContent style={{ position:'relative', bottom:60, left:75, fontSize:32, padding:0, zIndex:999999 }}>
+        Manage Navigation
         </CardContent>
-        <Divider />
-        <CardActions>
-          <Button
-            color="primary"
-            variant="outlined"
-          >
-            Save
-          </Button>
-        </CardActions>
-      </form>
     </Card>
   );
 };

@@ -27,7 +27,7 @@ const Footer = props => {
           href="https://devias.io/"
           target="_blank"
         >
-          Devias IO
+          My Digicraft
         </Link>
         . 2019
       </Typography>

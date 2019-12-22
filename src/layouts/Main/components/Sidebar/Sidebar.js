@@ -79,7 +79,7 @@ const Sidebar = props => {
       icon: <AccountBoxIcon />
     },
     {
-      title: 'Settings',
+      title: 'System Configuration',
       href: '/settings',
       icon: <SettingsIcon />
     }
@@ -103,7 +103,6 @@ const Sidebar = props => {
           className={classes.nav}
           pages={pages}
         />
-        <UpgradePlan />
       </div>
     </Drawer>
   );
